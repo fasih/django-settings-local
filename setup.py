@@ -10,6 +10,11 @@ setup(
   url = 'https://github.com/fasih/django-settings-local',
   download_url='https://github.com/fasihahmad/django-rest-framework-related-views/archive/v0.0.5.tar.gz',
   keywords = 'django local settings',
+  entry_points={
+    'console_scripts': [
+      'dsl = django_settings_local.__main__:main',
+    ],
+  },
   license='GPL-3.0',
   classifiers=[
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
