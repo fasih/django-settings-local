@@ -1,2 +1,2 @@
-# django-local-settings
-Manage Django Local Settings
+# django-settings-local
+Manage Django Local/Env Settings
