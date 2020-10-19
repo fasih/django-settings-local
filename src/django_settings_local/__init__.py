@@ -1,7 +1,10 @@
-import importlib, os
+import importlib
+import os
 
 from pathlib import Path
 from .cute_python import snek
+
+__version__ = '0.1.7'
 
 DSL_CACHE = os.environ.get("DSL_CACHE")
 
