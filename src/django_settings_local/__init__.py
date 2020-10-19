@@ -23,7 +23,7 @@ def import_local(g):
         settings_local.patch_globals(g)
     except ImportError:
         msg = "Use `settings_local.py` in the project app to override global settings"
-    except AttributeError:
+    except (AttributeError, TypeError):
         msg = "For global settings mutation, see format of settings_local.py `dsl -f`"
     finally:
         if not DSL_CACHE:
