@@ -5,7 +5,8 @@
 django-settings-local - Manage Django Local Settings
 ####################################################
 
-|travis| |nbsp| |codecov| |nbsp| |rtd-badge| |nbsp| |pypi-version|
+.. image:: https://badge.fury.io/py/django-settings-local.svg
+        :target: http://badge.fury.io/py/django-settings-local
 
 *****
 Usage
