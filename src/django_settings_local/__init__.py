@@ -12,7 +12,9 @@ def pritty_print(msg):
     print('\n','#'*len(msg),'\n',msg,'\n','#'*len(msg))
 
 def import_local(g):
-    PROJECT_APP = Path(g['__file__']).resolve(strict=True).parent.name
+    CWD = Path(os.getcwd())
+    PWD = Path(g['__file__']).resolve(strict=True).parent
+    PROJECT_APP = ".".join(PWD.relative_to(CWD).parts)
     try:
         msg = "Django local settings applied"
         settings_local = importlib.import_module(".settings_local", PROJECT_APP)
