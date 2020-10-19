@@ -1,7 +1,7 @@
 import os
 
 def test_main_console_script():
-    cmd0 = ['cd', 'src', '&&', 'python3', '-m', 'django_settings_local', '-p', '../tests/project_app/']
+    cmd0 = ['cd', 'src', '&&', 'python', '-m', 'django_settings_local', '-p', '../tests/project_app/']
     os.system(" ".join(cmd0))
     os.system(" ".join(cmd0))
 
