@@ -16,7 +16,7 @@ def import_local(g):
         for flag in dir(settings_local):
             if flag.startswith("__"):
                 continue
-            g.update(flag=getattr(settings_local, flag))
+            g[flag] = getattr(settings_local, flag)
         settings_local.patch_globals(g)
     except ImportError:
         msg = "Use `settings_local.py` in the project app to override global settings"
