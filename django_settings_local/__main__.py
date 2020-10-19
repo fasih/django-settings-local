@@ -1,37 +1,24 @@
-from pathlib import Path
 import argparse, os, shutil
 
-cute_python = r"""
-                    /^\/^\
-                  _|__|  O|
-         \/     /~     \_/ \
-          \____|__________/  \
-                 \_______      \
-                         `\     \                 \
-                           |     |                  \
-                          /      /                    \
-                         /     /                       \
-                       /      /                         \ \
-                      /     /                            \  \
-                    /     /             _----_            \   \
-                   /     /           _-~      ~-_         |   |
-                  (      (        _-~    _--_    ~-_     _/   |
-                   \      ~-____-~    _-~    ~-_    ~-_-~    /
-                     ~-_           _-~          ~-_       _-~ 
-                        ~--______-~                ~-___-~
-"""
+from pathlib import Path
+from .cute_python import snek
+
 FILE_NAME = 'settings_local.py'
 
-parser = argparse.ArgumentParser(description='Create Django Local Settings')
-parser.add_argument('-p', metavar='PATH', help='Django Project Application Path')
-parser.add_argument('-f', action='store_true', help='Show Django Local Settings Format')
 
 def main():
-    print(cute_python)
+    print(snek)
+
+    parser = argparse.ArgumentParser(description='Create Django Local Settings')
+    parser.add_argument('-p', metavar='PATH', help='Django Project Application Path')
+    parser.add_argument('-f', action='store_true', help='Show Django Local Settings Format')
     args = parser.parse_args()
+
     WORKING_DIR = Path(args.p or os.getcwd())
     PACKAGE_DIR = Path(__file__).resolve(strict=True).parent
+
     GIT_IGNORE = WORKING_DIR.parent/'.gitignore'
+    DJANGO_SETTINGS = WORKING_DIR/'settings.py'
 
     if args.f:
         with open(PACKAGE_DIR/FILE_NAME, 'r') as fb:
@@ -45,6 +32,13 @@ def main():
         else:
             fp = open(GIT_IGNORE, 'w')
         fp.write('\n# Added by Django Setting Local `dsl`\nsettings_local*\n')
+        fp.close()
+
+        fp = open(DJANGO_SETTINGS, 'a')
+        fp.write("\n\n\n\n")
+        fp.write("\n##################### END OF SETTINGS ################################")
+        fp.write("\nfrom django_settings_local import import_local;import_local(globals())")
+        fp.write("\n##################### END OF SETTINGS ################################")
         fp.close()
 
 if __name__ == '__main__':
