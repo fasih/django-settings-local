@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import io
 from setuptools import setup
 
 with io.open('README.rst', encoding='utf-8') as readme:
