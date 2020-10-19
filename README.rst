@@ -8,6 +8,8 @@ django-settings-local - Manage Django Local Settings
 .. image:: https://badge.fury.io/py/django-settings-local.svg
         :target: http://badge.fury.io/py/django-settings-local
 
+.. |Python package| image:: https://github.com/fasih/django-settings-local/workflows/Python%20package/badge.svg
+
 *****
 Usage
 *****
