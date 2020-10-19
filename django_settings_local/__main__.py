@@ -31,7 +31,7 @@ def main():
             fp = open(GIT_IGNORE, 'a')
         else:
             fp = open(GIT_IGNORE, 'w')
-        fp.write('\n# Added by Django Setting Local `dsl`\nsettings_local*\n')
+        fp.write('\n# Added by `dsl` (Django Setting Local) \nsettings_local*\n')
         fp.close()
 
         fp = open(DJANGO_SETTINGS, 'a')
