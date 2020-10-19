@@ -1,8 +1,12 @@
-# django-settings-local
-Manage Django Local Settings
+.. role:: python(code)
+   :language: python
 
-.. image:: https://badge.fury.io/py/django-settings-local.svg
-        :target: http://badge.fury.io/py/django-settings-local
+####################################################
+django-settings-local - Manage Django Local Settings
+####################################################
+
+|travis| |nbsp| |codecov| |nbsp| |rtd-badge| |nbsp| |pypi-version|
+
 *****
 Usage
 *****
@@ -20,13 +24,13 @@ The preferred instalation method is directly from pypi:
 1. Quickstart
 =============
 
-In your project app directory:
+In your Django project app directory:
 
 .. code:: console
 
    dsl
    
-2. QuickHelp
+2. Quickhelp
 =============
 
 Quick help from simple console script:
