@@ -7,9 +7,11 @@ django-settings-local - Manage Django Local Settings
 
 .. image:: https://badge.fury.io/py/django-settings-local.svg
         :target: http://badge.fury.io/py/django-settings-local
-
-.. |Python package| image:: https://github.com/fasih/django-settings-local/workflows/Test%20Python%20Package/badge.svg
-
+.. image:: https://github.com/fasih/django-settings-local/workflows/Test%20Python%20Package/badge.svg
+        :target: https://github.com/fasih/django-settings-local/actions?query=workflow%3A%22Test+Python+Package%22
+.. image:: https://codecov.io/gh/fasih/django-settings-local/branch/develop/graph/badge.svg?token=YDO44RQBSS
+      :target: https://codecov.io/gh/fasih/django-settings-local
+    
 *****
 Usage
 *****
