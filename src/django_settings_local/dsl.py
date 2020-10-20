@@ -28,11 +28,12 @@ def main():
         print(f"{FILE_NAME} is already there at {WORKING_DIR}")
     else:
         shutil.copyfile(PACKAGE_DIR/FILE_NAME, WORKING_DIR/FILE_NAME)
+
         if os.path.isfile(GIT_IGNORE):
             fp = open(GIT_IGNORE, 'a')
         else:
             fp = open(GIT_IGNORE, 'w')
-        fp.write('\n# Added by `dsl` (Django Setting Local) \nsettings_local*\n')
+        fp.write('\n# Added by `dsl` (Django Setting Local)\nsettings_local*\n')
         fp.close()
 
         fp = open(DJANGO_SETTINGS, 'a')
