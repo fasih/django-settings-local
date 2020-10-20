@@ -19,7 +19,10 @@ django-settings-local - Manage Django Local Settings
 
 .. image:: https://codecov.io/gh/fasih/django-settings-local/branch/develop/graph/badge.svg?token=YDO44RQBSS
       :target: https://codecov.io/gh/fasih/django-settings-local
-    
+
+.. image:: https://deepsource.io/gh/fasih/django-settings-local.svg/?label=active+issues&show_trend=true
+      :target: https://deepsource.io/gh/fasih/django-settings-local/?ref=repository-badge
+
 *****
 Usage
 *****
