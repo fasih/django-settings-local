@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 from .cute_python import snek
 
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 
 DSL_CACHE = os.environ.get("DSL_CACHE")
 
