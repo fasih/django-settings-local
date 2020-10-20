@@ -2,6 +2,7 @@ import argparse, os, shutil
 
 from pathlib import Path
 from .cute_python import snek
+from . import __version__ as version
 
 
 FILE_NAME = 'settings_local.py'
@@ -13,6 +14,7 @@ def main():
     parser = argparse.ArgumentParser(description='Create Django Local Settings')
     parser.add_argument('-p', metavar='PATH', help='Django Project Application Path')
     parser.add_argument('-f', action='store_true', help='Show Django Local Settings Format')
+    parser.add_argument('-v', action="version", version=version)
     args = parser.parse_args()
 
     WORKING_DIR = Path(args.p or os.getcwd())
